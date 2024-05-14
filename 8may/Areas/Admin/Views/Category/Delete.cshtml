@@ -1,0 +1,17 @@
+﻿@model Category
+<div class="container">
+    <div class="row">
+        <div class="card" style="width: 18rem;">
+            <form asp-action="DeletePost" asp-controller="Category" method="post">
+
+                <div class="card-body">
+                    <h5 class="card-title">@Model.Name</h5>
+                    <input asp-for="@Model.Id" hidden value="@Model.Id" />
+                    <a asp-action="Index" asp-controller="Category" class="card-link">Go Back</a>
+
+                    <button type="submit" class="btn-outline-danger">Delete</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
